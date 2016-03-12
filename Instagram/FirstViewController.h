@@ -17,7 +17,7 @@
     NSMutableData *receivedData;
 }
 @property (nonatomic, retain) IBOutlet UIWebView *webview;
-//@property (nonatomic, retain) IBOutlet TapazineLoadingIndicator *indicator;
+
 @property (nonatomic, retain) NSString *isLogin;
 @property (assign, nonatomic) Boolean isReader;
 @end

@@ -41,6 +41,8 @@
 		012B40401C94A15500E8DBC9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B403A1C94A15500E8DBC9 /* SBJsonParser.m */; };
 		012B40411C94A15500E8DBC9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B403C1C94A15500E8DBC9 /* SBJsonWriter.m */; };
 		012B40451C94A4EB00E8DBC9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B40441C94A4EB00E8DBC9 /* BaseViewController.m */; };
+		012B404A1C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */; };
+		012B404D1C94AD4600E8DBC9 /* ImagesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,10 @@
 		012B40421C94A44400E8DBC9 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		012B40431C94A4EB00E8DBC9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		012B40441C94A4EB00E8DBC9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		012B40481C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramPublicPhotosViewController.h; sourceTree = "<group>"; };
+		012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramPublicPhotosViewController.m; sourceTree = "<group>"; };
+		012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewCell.h; sourceTree = "<group>"; };
+		012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				012B3FC51C949F5700E8DBC9 /* Main.storyboard */,
+				012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */,
+				012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */,
 				012B40461C94A96300E8DBC9 /* Controllers */,
 				012B40471C94A97B00E8DBC9 /* Library */,
 				012B3FBC1C949F5700E8DBC9 /* Supporting Files */,
@@ -309,6 +317,8 @@
 				012B40441C94A4EB00E8DBC9 /* BaseViewController.m */,
 				012B402E1C94A00C00E8DBC9 /* FirstViewController.h */,
 				012B402F1C94A00C00E8DBC9 /* FirstViewController.m */,
+				012B40481C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.h */,
+				012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -465,8 +475,10 @@
 				012B40271C949FAC00E8DBC9 /* OAProblem.m in Sources */,
 				012B402C1C949FAC00E8DBC9 /* OATokenManager.m in Sources */,
 				012B40221C949FAC00E8DBC9 /* OAConsumer.m in Sources */,
+				012B404D1C94AD4600E8DBC9 /* ImagesTableViewCell.m in Sources */,
 				012B403E1C94A15500E8DBC9 /* NSString+SBJSON.m in Sources */,
 				012B401F1C949FAC00E8DBC9 /* sha1.c in Sources */,
+				012B404A1C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m in Sources */,
 				012B40281C949FAC00E8DBC9 /* OARequestParameter.m in Sources */,
 				012B40211C949FAC00E8DBC9 /* OACall.m in Sources */,
 				012B40301C94A00C00E8DBC9 /* FirstViewController.m in Sources */,
@@ -708,6 +720,7 @@
 				012B3FE81C949F5700E8DBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012B3FE91C949F5700E8DBC9 /* Build configuration list for PBXNativeTarget "InstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +729,7 @@
 				012B3FEB1C949F5700E8DBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012B3FEC1C949F5700E8DBC9 /* Build configuration list for PBXNativeTarget "InstagramUITests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +738,7 @@
 				012B3FEE1C949F5700E8DBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

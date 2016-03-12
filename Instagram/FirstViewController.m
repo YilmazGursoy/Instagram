@@ -92,6 +92,8 @@
     
     NSString *accessToken = [[jResponse objectWithString:response] objectForKey:@"access_token"];
     
-    [self showAlertMessage:accessToken WithTitle:@"Access Token" andPop:false];
+  //  [self showAlertMessage:accessToken WithTitle:@"Access Token" andPop:false];
+    
+    [self performSegueWithIdentifier:@"show" sender:nil];
 }
 @end
