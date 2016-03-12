@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pv-5W-fQF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Instagram-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoW-nU-wZf">
+                                <rect key="frame" x="48" y="42" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="65D-xN-3KY"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zoW-nU-wZf" secondAttribute="trailing" id="8a4-Xh-DHd"/>
+                            <constraint firstItem="zoW-nU-wZf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KVM-n4-mgF"/>
+                            <constraint firstItem="zoW-nU-wZf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SW2-EZ-JHk"/>
+                            <constraint firstItem="zoW-nU-wZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TiL-7T-m7R"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8a4-Xh-DHd"/>
+                                <exclude reference="KVM-n4-mgF"/>
+                                <exclude reference="SW2-EZ-JHk"/>
+                                <exclude reference="TiL-7T-m7R"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8a4-Xh-DHd"/>
+                                <include reference="KVM-n4-mgF"/>
+                                <include reference="SW2-EZ-JHk"/>
+                                <include reference="TiL-7T-m7R"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Instagram" id="5PL-7S-L6K"/>
+                    <connections>
+                        <outlet property="webview" destination="zoW-nU-wZf" id="DAx-LR-uZC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1227" y="283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gNj-Pm-Csx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5pv-5W-fQF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pCg-yF-fXc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F8t-Ry-Tkp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRD-Lg-YuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="366"/>
         </scene>
     </scenes>
 </document>
