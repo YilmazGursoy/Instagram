@@ -18,7 +18,7 @@
 @synthesize webview;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.receivedData = [[NSMutableData alloc]init];
     NSString *url = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=code",client_id,callback];
     
     [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
@@ -36,7 +36,7 @@
     
     NSLog(@"URL  =  %@",[[request URL] host]);
     
-    if ([[[request URL] host] isEqualToString:@"codegerms.com"]) {
+    if ([[[request URL] host] isEqualToString:key_callback]) {
         
         NSString* verifier = nil;
         NSArray* urlParams = [[[request URL] query] componentsSeparatedByString:@"&"];
@@ -70,30 +70,5 @@
     }
     return YES;
 }
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
-}
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 
-{
-    [receivedData appendData:data];
-}
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    
-    [self showAlertMessage:[NSString stringWithFormat:@"%@", error] WithTitle:@"Error" andPop:false];
-    
-}
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    
-    NSString *response = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    
-    SBJsonParser *jResponse = [[SBJsonParser alloc]init];
-    
-    NSString *accessToken = [[jResponse objectWithString:response] objectForKey:@"access_token"];
-    
-  //  [self showAlertMessage:accessToken WithTitle:@"Access Token" andPop:false];
-    
-    [self performSegueWithIdentifier:@"show" sender:nil];
-}
 @end

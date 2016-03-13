@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -53,7 +54,6 @@
                     <navigationItem key="navigationItem" title="Instagram" id="5PL-7S-L6K"/>
                     <connections>
                         <outlet property="webview" destination="zoW-nU-wZf" id="DAx-LR-uZC"/>
-                        <segue destination="vIg-Td-SQn" kind="push" identifier="show" id="3Qp-FP-cSw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,7 +63,7 @@
         <!--Instagram-->
         <scene sceneID="Sxs-Jb-LCx">
             <objects>
-                <viewController id="vIg-Td-SQn" customClass="InstagramPublicPhotosViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PublicPhotosID" id="vIg-Td-SQn" customClass="InstagramPublicPhotosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cJX-Pv-Ume"/>
                         <viewControllerLayoutGuide type="bottom" id="DI9-uP-Ejr"/>
@@ -80,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXW-KU-Uj9" id="Qs0-m1-Qq4">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="390"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a83-cb-H7f">
@@ -152,15 +152,15 @@
                                                             <exclude reference="lWO-BY-47v"/>
                                                         </mask>
                                                         <mask key="constraints">
-                                                            <exclude reference="45W-zT-guy"/>
-                                                            <exclude reference="LsX-Yb-S8T"/>
-                                                            <exclude reference="vE8-Ef-fJk"/>
                                                             <exclude reference="9ae-sX-1pH"/>
                                                             <exclude reference="Og1-Z3-3BG"/>
                                                             <exclude reference="fr8-4u-8Yn"/>
                                                             <exclude reference="1dz-bK-hMj"/>
                                                             <exclude reference="Fpg-qv-Bef"/>
                                                             <exclude reference="qNP-DU-EeS"/>
+                                                            <exclude reference="45W-zT-guy"/>
+                                                            <exclude reference="LsX-Yb-S8T"/>
+                                                            <exclude reference="vE8-Ef-fJk"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="widthClass=compact">
@@ -170,15 +170,15 @@
                                                             <include reference="lWO-BY-47v"/>
                                                         </mask>
                                                         <mask key="constraints">
-                                                            <include reference="45W-zT-guy"/>
-                                                            <include reference="LsX-Yb-S8T"/>
-                                                            <include reference="vE8-Ef-fJk"/>
                                                             <include reference="9ae-sX-1pH"/>
                                                             <include reference="Og1-Z3-3BG"/>
                                                             <include reference="fr8-4u-8Yn"/>
                                                             <include reference="1dz-bK-hMj"/>
                                                             <include reference="Fpg-qv-Bef"/>
                                                             <include reference="qNP-DU-EeS"/>
+                                                            <include reference="45W-zT-guy"/>
+                                                            <include reference="LsX-Yb-S8T"/>
+                                                            <include reference="vE8-Ef-fJk"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -210,6 +210,7 @@
                                                 <constraint firstItem="oKw-fv-2ND" firstAttribute="top" secondItem="a83-cb-H7f" secondAttribute="bottom" constant="8" symbolic="YES" id="YzX-Kp-a2b"/>
                                                 <constraint firstItem="a83-cb-H7f" firstAttribute="top" secondItem="Qs0-m1-Qq4" secondAttribute="topMargin" constant="12" id="Zd4-pE-Do2"/>
                                                 <constraint firstItem="oKw-fv-2ND" firstAttribute="leading" secondItem="Qs0-m1-Qq4" secondAttribute="leadingMargin" constant="52" id="nbw-hL-0u3"/>
+                                                <constraint firstAttribute="trailing" secondItem="a83-cb-H7f" secondAttribute="trailing" constant="160" id="xQe-uo-rJs"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -221,12 +222,14 @@
                                                     <exclude reference="T56-Oa-gto"/>
                                                     <exclude reference="Xeq-xW-fbr"/>
                                                     <exclude reference="Zd4-pE-Do2"/>
+                                                    <exclude reference="xQe-uo-rJs"/>
                                                     <exclude reference="7Wn-fN-Mml"/>
                                                     <exclude reference="YzX-Kp-a2b"/>
                                                     <exclude reference="nbw-hL-0u3"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact">
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="390"/>
                                                 <mask key="subviews">
                                                     <include reference="a83-cb-H7f"/>
                                                     <include reference="oKw-fv-2ND"/>
@@ -236,6 +239,7 @@
                                                     <include reference="T56-Oa-gto"/>
                                                     <include reference="Xeq-xW-fbr"/>
                                                     <include reference="Zd4-pE-Do2"/>
+                                                    <include reference="xQe-uo-rJs"/>
                                                     <include reference="7Wn-fN-Mml"/>
                                                     <include reference="YzX-Kp-a2b"/>
                                                     <include reference="nbw-hL-0u3"/>
@@ -332,7 +336,4 @@
     <resources>
         <image name="Untitled" width="583" height="584"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="3Qp-FP-cSw"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -43,6 +43,8 @@
 		012B40451C94A4EB00E8DBC9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B40441C94A4EB00E8DBC9 /* BaseViewController.m */; };
 		012B404A1C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */; };
 		012B404D1C94AD4600E8DBC9 /* ImagesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */; };
+		012B40501C95DCE700E8DBC9 /* ImageDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B404F1C95DCE700E8DBC9 /* ImageDetail.m */; };
+		012B40541C95E23300E8DBC9 /* ServerImageDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B40531C95E23300E8DBC9 /* ServerImageDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,10 @@
 		012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramPublicPhotosViewController.m; sourceTree = "<group>"; };
 		012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewCell.h; sourceTree = "<group>"; };
 		012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewCell.m; sourceTree = "<group>"; };
+		012B404E1C95DCE700E8DBC9 /* ImageDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetail.h; sourceTree = "<group>"; };
+		012B404F1C95DCE700E8DBC9 /* ImageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetail.m; sourceTree = "<group>"; };
+		012B40521C95E23300E8DBC9 /* ServerImageDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerImageDetail.h; sourceTree = "<group>"; };
+		012B40531C95E23300E8DBC9 /* ServerImageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerImageDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 				012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */,
 				012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */,
 				012B40461C94A96300E8DBC9 /* Controllers */,
+				012B40511C95E18500E8DBC9 /* dataObject */,
 				012B40471C94A97B00E8DBC9 /* Library */,
 				012B3FBC1C949F5700E8DBC9 /* Supporting Files */,
 			);
@@ -330,6 +337,17 @@
 				012B3FEF1C949FAC00E8DBC9 /* oauthconsumer-master */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		012B40511C95E18500E8DBC9 /* dataObject */ = {
+			isa = PBXGroup;
+			children = (
+				012B404E1C95DCE700E8DBC9 /* ImageDetail.h */,
+				012B404F1C95DCE700E8DBC9 /* ImageDetail.m */,
+				012B40521C95E23300E8DBC9 /* ServerImageDetail.h */,
+				012B40531C95E23300E8DBC9 /* ServerImageDetail.m */,
+			);
+			name = dataObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,9 +502,11 @@
 				012B40301C94A00C00E8DBC9 /* FirstViewController.m in Sources */,
 				012B40201C949FAC00E8DBC9 /* OAAttachment.m in Sources */,
 				012B40291C949FAC00E8DBC9 /* OAServiceTicket.m in Sources */,
+				012B40501C95DCE700E8DBC9 /* ImageDetail.m in Sources */,
 				012B40251C949FAC00E8DBC9 /* OAMutableURLRequest.m in Sources */,
 				012B40451C94A4EB00E8DBC9 /* BaseViewController.m in Sources */,
 				012B40231C949FAC00E8DBC9 /* OADataFetcher.m in Sources */,
+				012B40541C95E23300E8DBC9 /* ServerImageDetail.m in Sources */,
 				012B403D1C94A15500E8DBC9 /* NSObject+SBJSON.m in Sources */,
 				012B3FC11C949F5700E8DBC9 /* AppDelegate.m in Sources */,
 				012B401A1C949FAC00E8DBC9 /* NSMutableURLRequest+Parameters.m in Sources */,

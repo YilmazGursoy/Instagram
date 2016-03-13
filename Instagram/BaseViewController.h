@@ -12,9 +12,22 @@
 #import "AppConstants.h"
 #import "JSON.h"
 
-@interface BaseViewController : UIViewController
+@protocol ServerImageDetailDelegate <NSObject>
 
+@required
+
+-(void)reloadTableDataAndGetNewImages:(NSMutableArray*)newAllImageDetailObjects;
+-(void)reloadingTableDataFailed;
+
+@end
+
+
+@interface BaseViewController : UIViewController <ServerImageDetailDelegate>
+
+@property (strong, nonatomic) NSMutableData *receivedData;
+@property (strong, nonatomic) NSMutableArray *allImageDetailsObjects;
+@property (strong, nonatomic) id<ServerImageDetailDelegate> delegate;
 
 -(void)showAlertMessage:(NSString*)message WithTitle:(NSString*)title andPop:(BOOL)isPop;
-
+-(instancetype)initWithDelegate:(id<ServerImageDetailDelegate>)delegate;
 @end
