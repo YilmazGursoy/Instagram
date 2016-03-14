@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSDictionary *data;
 @property (strong, nonatomic) BaseViewController *baseVC;
 @property (strong, nonatomic) NSMutableArray *allImageDetailObjects;
-@property (retain, nonatomic) IBOutlet UISearchBar *serachBar;
+@property (retain, nonatomic) IBOutlet UISearchBar *searchbar;
 
 
 @end

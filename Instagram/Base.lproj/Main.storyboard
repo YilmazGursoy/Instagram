@@ -69,7 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DI9-uP-Ejr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="67z-gT-16X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="449" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SCY-1K-zJu">
@@ -143,7 +143,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                                <rect key="frame" x="261" y="8" width="115" height="21"/>
+                                                                <rect key="frame" x="52" y="42" width="0.0" height="0.0"/>
                                                             </variation>
                                                         </label>
                                                     </subviews>
@@ -249,6 +249,8 @@
                                                     <exclude reference="R50-dP-CIL"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="kgS-25-bhO"/>
+                                                    <exclude reference="qE3-E8-npg"/>
                                                     <exclude reference="HHA-IT-Q3u"/>
                                                     <exclude reference="Hof-St-BJq"/>
                                                     <exclude reference="ZYf-s9-TOp"/>
@@ -256,8 +258,6 @@
                                                     <exclude reference="77f-LL-d7f"/>
                                                     <exclude reference="7YI-WJ-F0v"/>
                                                     <exclude reference="xYn-eK-sxf"/>
-                                                    <exclude reference="kgS-25-bhO"/>
-                                                    <exclude reference="qE3-E8-npg"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -267,6 +267,8 @@
                                                     <include reference="R50-dP-CIL"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="kgS-25-bhO"/>
+                                                    <include reference="qE3-E8-npg"/>
                                                     <include reference="HHA-IT-Q3u"/>
                                                     <include reference="Hof-St-BJq"/>
                                                     <include reference="ZYf-s9-TOp"/>
@@ -274,8 +276,6 @@
                                                     <include reference="77f-LL-d7f"/>
                                                     <include reference="7YI-WJ-F0v"/>
                                                     <include reference="xYn-eK-sxf"/>
-                                                    <include reference="kgS-25-bhO"/>
-                                                    <include reference="qE3-E8-npg"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -331,7 +331,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
-                        <outlet property="serachBar" destination="Ryg-oj-sH2" id="JPv-9x-wQO"/>
+                        <outlet property="searchbar" destination="Ryg-oj-sH2" id="9bZ-wf-cWG"/>
                         <outlet property="tableView" destination="SCY-1K-zJu" id="FUO-KY-6Ag"/>
                     </connections>
                 </viewController>

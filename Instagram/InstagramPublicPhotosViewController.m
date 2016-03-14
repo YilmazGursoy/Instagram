@@ -31,7 +31,7 @@ static bool controlForRemoveAllObjects = false;
     self.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.serachBar.delegate = self;
+    self.searchbar.delegate = self;
     mainURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",imageRequestURL,self.accessToken]];
     
     controlForRemoveAllObjects = false;
@@ -137,7 +137,7 @@ static bool controlForRemoveAllObjects = false;
     
     [self showAlertMessage:@"Aradiginiz tag ile alakalı birsey bulunamamistir" WithTitle:@"Uyarı!" andPop:true];
     
-    [self.serachBar resignFirstResponder];
+    [self.searchbar resignFirstResponder];
     
 }
 
@@ -154,7 +154,7 @@ static bool controlForRemoveAllObjects = false;
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
 
-    [self.serachBar resignFirstResponder];
+    [self.searchbar resignFirstResponder];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?access_token=%@",searchBar.text,self.accessToken]];
     
