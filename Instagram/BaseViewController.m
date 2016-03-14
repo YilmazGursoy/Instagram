@@ -9,10 +9,19 @@
 #import "BaseViewController.h"
 #import "InstagramPublicPhotosViewController.h"
 #import "ServerImageDetail.h"
+#import "ServerNextData.h"
+
+@interface BaseViewController()
+
+@property (strong, nonatomic) NSMutableArray *allImageDetailsObjects;
+
+@end
 
 @implementation BaseViewController
 
--(instancetype)initWithDelegate:(id)delegate{
+static bool isGetToken = false;
+
+-(instancetype)initWithDelegate:(id<ServerImageDetailDelegate>)delegate{
     
     if(self) {
         
@@ -51,7 +60,12 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 
 {
-    [_receivedData appendData:data];
+    if(!isGetToken) {
+        _receivedData = [[NSMutableData alloc]init];
+        isGetToken = true;
+    }
+    
+    [_receivedData appendData:[data mutableCopy]];
 }
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     
@@ -65,29 +79,35 @@
     
     SBJsonParser *jResponse = [[SBJsonParser alloc]init];
     
-    NSDictionary *tokenData = [jResponse objectWithString:response];
-    
+    NSMutableDictionary *tokenData = [jResponse objectWithString:response];
+
     NSString *accessToken = [tokenData objectForKey:@"access_token"];
-
+    
     InstagramPublicPhotosViewController *prof = [self.storyboard instantiateViewControllerWithIdentifier:PublicPhotosID];
-
     
     if(accessToken != nil) {
         //User call this function inside of FirstViewController
         
         prof.accessToken = accessToken;
+
+        isGetToken = true;
         
         [self.navigationController pushViewController:prof animated:true];
         
-    } else {
+    }else {
         //User call this function inside of InstagramPublicPhotosViewController
+        
+        prof.data = tokenData;
+        
+        self.nextImageDataURL = [ServerNextData getNextDataURL:tokenData];
         
         self.allImageDetailsObjects = [ServerImageDetail getAllImageDetailObjects:prof.data];
 
         if(self.allImageDetailsObjects.count > 0) {
     
             [self.delegate reloadTableDataAndGetNewImages:self.allImageDetailsObjects];
-
+            isGetToken = false;
+            
         } else {
             
             [self.delegate reloadingTableDataFailed];

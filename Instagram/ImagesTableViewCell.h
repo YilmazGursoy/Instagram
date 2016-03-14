@@ -13,4 +13,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *userProfileNameLabel;
 @property (retain, nonatomic) IBOutlet UILabel *timeLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *userImageView;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *profileIndicatorView;
+@property (retain, nonatomic) IBOutlet UILabel *createdTimeLabel;
 @end

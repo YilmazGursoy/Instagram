@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01102BA51C97263900AB6DB8 /* ServerNextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01102BA41C97263900AB6DB8 /* ServerNextData.m */; };
+		01102BA81C9749E300AB6DB8 /* HelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 01102BA71C9749E300AB6DB8 /* HelperClass.m */; };
+		01102BAE1C975A0900AB6DB8 /* HighImageDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01102BAD1C975A0900AB6DB8 /* HighImageDataViewController.m */; };
 		012B3FBE1C949F5700E8DBC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B3FBD1C949F5700E8DBC9 /* main.m */; };
 		012B3FC11C949F5700E8DBC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B3FC01C949F5700E8DBC9 /* AppDelegate.m */; };
 		012B3FC71C949F5700E8DBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012B3FC51C949F5700E8DBC9 /* Main.storyboard */; };
@@ -65,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01102BA31C97263900AB6DB8 /* ServerNextData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerNextData.h; sourceTree = "<group>"; };
+		01102BA41C97263900AB6DB8 /* ServerNextData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerNextData.m; sourceTree = "<group>"; };
+		01102BA61C9749E300AB6DB8 /* HelperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperClass.h; sourceTree = "<group>"; };
+		01102BA71C9749E300AB6DB8 /* HelperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperClass.m; sourceTree = "<group>"; };
+		01102BAC1C975A0900AB6DB8 /* HighImageDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighImageDataViewController.h; path = ../HighImageDataViewController.h; sourceTree = "<group>"; };
+		01102BAD1C975A0900AB6DB8 /* HighImageDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighImageDataViewController.m; path = ../HighImageDataViewController.m; sourceTree = "<group>"; };
 		012B3FB91C949F5700E8DBC9 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012B3FBD1C949F5700E8DBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		012B3FBF1C949F5700E8DBC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -170,6 +179,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01102BAF1C97728C00AB6DB8 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */,
+				012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		01102BB01C9772B600AB6DB8 /* Helper/Base */ = {
+			isa = PBXGroup;
+			children = (
+				012B40421C94A44400E8DBC9 /* AppConstants.h */,
+				012B404E1C95DCE700E8DBC9 /* ImageDetail.h */,
+				012B404F1C95DCE700E8DBC9 /* ImageDetail.m */,
+				01102BA61C9749E300AB6DB8 /* HelperClass.h */,
+				01102BA71C9749E300AB6DB8 /* HelperClass.m */,
+			);
+			name = Helper/Base;
+			sourceTree = "<group>";
+		};
 		012B3FB01C949F5700E8DBC9 = {
 			isa = PBXGroup;
 			children = (
@@ -194,10 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				012B3FC51C949F5700E8DBC9 /* Main.storyboard */,
-				012B404B1C94AD4600E8DBC9 /* ImagesTableViewCell.h */,
-				012B404C1C94AD4600E8DBC9 /* ImagesTableViewCell.m */,
 				012B40461C94A96300E8DBC9 /* Controllers */,
-				012B40511C95E18500E8DBC9 /* dataObject */,
+				01102BAF1C97728C00AB6DB8 /* TableCell */,
+				012B40511C95E18500E8DBC9 /* Server */,
+				01102BB01C9772B600AB6DB8 /* Helper/Base */,
 				012B40471C94A97B00E8DBC9 /* Library */,
 				012B3FBC1C949F5700E8DBC9 /* Supporting Files */,
 			);
@@ -209,7 +239,6 @@
 			children = (
 				012B3FC81C949F5700E8DBC9 /* Assets.xcassets */,
 				012B3FCA1C949F5700E8DBC9 /* LaunchScreen.storyboard */,
-				012B40421C94A44400E8DBC9 /* AppConstants.h */,
 				012B3FCD1C949F5700E8DBC9 /* Info.plist */,
 				012B3FBF1C949F5700E8DBC9 /* AppDelegate.h */,
 				012B3FC01C949F5700E8DBC9 /* AppDelegate.m */,
@@ -326,6 +355,8 @@
 				012B402F1C94A00C00E8DBC9 /* FirstViewController.m */,
 				012B40481C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.h */,
 				012B40491C94AB3500E8DBC9 /* InstagramPublicPhotosViewController.m */,
+				01102BAC1C975A0900AB6DB8 /* HighImageDataViewController.h */,
+				01102BAD1C975A0900AB6DB8 /* HighImageDataViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,15 +370,15 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		012B40511C95E18500E8DBC9 /* dataObject */ = {
+		012B40511C95E18500E8DBC9 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				012B404E1C95DCE700E8DBC9 /* ImageDetail.h */,
-				012B404F1C95DCE700E8DBC9 /* ImageDetail.m */,
 				012B40521C95E23300E8DBC9 /* ServerImageDetail.h */,
 				012B40531C95E23300E8DBC9 /* ServerImageDetail.m */,
+				01102BA31C97263900AB6DB8 /* ServerNextData.h */,
+				01102BA41C97263900AB6DB8 /* ServerNextData.m */,
 			);
-			name = dataObject;
+			name = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,10 +514,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				012B401E1C949FAC00E8DBC9 /* hmac.c in Sources */,
+				01102BA81C9749E300AB6DB8 /* HelperClass.m in Sources */,
 				012B40411C94A15500E8DBC9 /* SBJsonWriter.m in Sources */,
 				012B403F1C94A15500E8DBC9 /* SBJsonBase.m in Sources */,
 				012B402B1C949FAC00E8DBC9 /* OAToken.m in Sources */,
 				012B40401C94A15500E8DBC9 /* SBJsonParser.m in Sources */,
+				01102BAE1C975A0900AB6DB8 /* HighImageDataViewController.m in Sources */,
 				012B40241C949FAC00E8DBC9 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				012B401D1C949FAC00E8DBC9 /* Base64Transcoder.c in Sources */,
 				012B401B1C949FAC00E8DBC9 /* NSString+URLEncoding.m in Sources */,
@@ -509,6 +542,7 @@
 				012B40541C95E23300E8DBC9 /* ServerImageDetail.m in Sources */,
 				012B403D1C94A15500E8DBC9 /* NSObject+SBJSON.m in Sources */,
 				012B3FC11C949F5700E8DBC9 /* AppDelegate.m in Sources */,
+				01102BA51C97263900AB6DB8 /* ServerNextData.m in Sources */,
 				012B401A1C949FAC00E8DBC9 /* NSMutableURLRequest+Parameters.m in Sources */,
 				012B3FBE1C949F5700E8DBC9 /* main.m in Sources */,
 				012B401C1C949FAC00E8DBC9 /* NSURL+Base.m in Sources */,

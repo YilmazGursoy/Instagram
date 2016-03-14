@@ -7,6 +7,7 @@
 //
 
 #import "ServerImageDetail.h"
+#import "ImageDetail.h"
 
 @implementation ServerImageDetail
 
@@ -21,6 +22,13 @@
     
     NSMutableString *dataType;
     
+    NSMutableString *userProfilePicture;
+    
+    NSMutableString *lowResolutionImage;
+    
+    NSMutableString *standartResolutionImage;
+
+    ImageDetail *imageDetailObject = [[ImageDetail alloc]init];
     
     NSMutableArray *allObjects = [[NSMutableArray alloc]init];
     
@@ -30,13 +38,23 @@
         
         userName = imageObjectDictionary[@"user"][@"username"];
         
-        createdTime = imageObjectDictionary[@""];
+        createdTime = imageObjectDictionary[@"created_time"];
         
+        numberOfImageLikes = (int)imageObjectDictionary[@"likes"][@"count"];
         
-    
+        dataType = imageObjectDictionary[@"type"];
+        
+        userProfilePicture = imageObjectDictionary[@"user"][@"profile_picture"];
+        
+        lowResolutionImage = imageObjectDictionary[@"images"][@"low_resolution"][@"url"];
+        
+        standartResolutionImage = imageObjectDictionary[@"images"][@"standard_resolution"][@"url"];
+        
+        imageDetailObject = [ImageDetail getImageDetailObjectUsingName:userName createdTime:createdTime Likes:numberOfImageLikes profilePictureURL:userProfilePicture dataType:dataType lowResImageURL:lowResolutionImage andStandartResImageURL:standartResolutionImage];
+        
+        [allObjects addObject:imageDetailObject];
     
     }
-    
     
     return allObjects;
 }

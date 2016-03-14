@@ -16,13 +16,13 @@
 
 @property (nonatomic) int numberOfImageLikes;
 
-@property (strong, nonatomic) NSURL *userProfilePictureURL;
+@property (strong, nonatomic) NSMutableString *userProfilePictureURL;
 
 @property (strong, nonatomic) NSString *dataType;
 
-@property (strong, nonatomic) NSURL *lowResolutionImageURL;
+@property (strong, nonatomic) NSMutableString *lowResolutionImageURL;
 
-@property (strong, nonatomic) NSURL *standartResolutionImageURL;
+@property (strong, nonatomic) NSMutableString *standartResolutionImageURL;
 
 
 /**
@@ -38,6 +38,6 @@
  *
  *  @return Full ImageDetail object
  */
--(ImageDetail*)getImageDetailObjectUsingName:(NSString*)userName createdTime:(NSString*)createdTime Likes:(int)numberOfLikes profilePictureURL:(NSURL*)profilePictureURL dataType:(NSString*)type lowResImageURL:(NSURL*)lowResURL andStandartResImageURL:(NSURL*)standartResURL;
++(ImageDetail*)getImageDetailObjectUsingName:(NSString*)userName createdTime:(NSString*)createdTime Likes:(int)numberOfLikes profilePictureURL:(NSMutableString*)profilePictureURL dataType:(NSString*)type lowResImageURL:(NSMutableString*)lowResURL andStandartResImageURL:(NSMutableString*)standartResURL;
 
 @end

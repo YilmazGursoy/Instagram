@@ -10,18 +10,29 @@
 
 @implementation ImageDetail
 
--(ImageDetail*)getImageDetailObjectUsingName:(NSString*)userName
++(ImageDetail*)getImageDetailObjectUsingName:(NSString*)userName
                                                         createdTime:(NSString*)createdTime
                                                         Likes:(int)numberOfLikes
-                                                        profilePictureURL:(NSURL*)profilePictureURL
+                                                        profilePictureURL:(NSMutableString*)profilePictureURL
                                                         dataType:(NSString*)type
-                                                        lowResImageURL:(NSURL*)lowResURL
-                                                        andStandartResImageURL:(NSURL*)standartResURL{
+                                                        lowResImageURL:(NSMutableString*)lowResURL
+                                                        andStandartResImageURL:(NSMutableString*)standartResURL{
+
+    NSDate* date1 = [NSDate dateWithTimeIntervalSince1970:[createdTime doubleValue]];
+    
+    NSDate* date2 = [NSDate date];
+    
+    NSTimeInterval distanceBetweenDates = [date2 timeIntervalSinceDate:date1];
+    
+    double secondsInAnHour = 60;
+    
+    NSInteger hoursBetweenDates = distanceBetweenDates / secondsInAnHour;
+    
     ImageDetail *detailObject = [[ImageDetail alloc]init];
     
     detailObject.userName = userName;
     
-    detailObject.createdTime = createdTime;
+    detailObject.createdTime = [NSString stringWithFormat:@"%ld",(long)hoursBetweenDates];
     
     detailObject.numberOfImageLikes = numberOfLikes;
     

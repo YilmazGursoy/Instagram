@@ -15,7 +15,6 @@
 @protocol ServerImageDetailDelegate <NSObject>
 
 @required
-
 -(void)reloadTableDataAndGetNewImages:(NSMutableArray*)newAllImageDetailObjects;
 -(void)reloadingTableDataFailed;
 
@@ -25,7 +24,7 @@
 @interface BaseViewController : UIViewController <ServerImageDetailDelegate>
 
 @property (strong, nonatomic) NSMutableData *receivedData;
-@property (strong, nonatomic) NSMutableArray *allImageDetailsObjects;
+@property (strong, nonatomic) NSURL *nextImageDataURL;
 @property (strong, nonatomic) id<ServerImageDetailDelegate> delegate;
 
 -(void)showAlertMessage:(NSString*)message WithTitle:(NSString*)title andPop:(BOOL)isPop;

@@ -15,6 +15,9 @@
     [_userProfileNameLabel release];
     [_timeLabel release];
     [UIPageViewController release];
+    [_indicatorView release];
+    [_profileIndicatorView release];
+    [_createdTimeLabel release];
     [super dealloc];
 }
 @end
