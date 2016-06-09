@@ -13,4 +13,6 @@ Searching screen, user if want search tags using searchbar top of the screen
 ![ScreenShot](https://github.com/YilmazGursoy/Instagram/blob/master/Simulator%20Screen%20Shot%2015%20Mar%202016%2000.55.13.png)
 
 Image standart resolution ViewController, this view controller include image sender username/profilePicture/createdDate and original image data
+
+
 ![ScreenShot](https://github.com/YilmazGursoy/Instagram/blob/master/Simulator%20Screen%20Shot%2015%20Mar%202016%2000.55.18.png)
